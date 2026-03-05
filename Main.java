@@ -1,6 +1,6 @@
 
 public static void main(String[] args) {
-    Xpay xpay = new XpayImpl();
+    Xpay xpay = new XpayImpl(); // สร้างตัวแปร class Xpay ชื่อ xpay
     xpay.setCreditCardNo("4789565874102365");
     xpay.setCustomerName("Somchai Jaidee");
     xpay.setCardExpMonth("09");
@@ -8,7 +8,7 @@ public static void main(String[] args) {
     xpay.setCardCVVNo((short) 235);
     xpay.setAmount(2565.23);
 
-    PayD payD = new XpayToPayDAdapter(xpay);
+    PayD payD = new XpayToPayDAdapter(xpay); //สร้างตัวแปร payD ใน class PayD ซึ่งเป็น class XpayToPayDAdapter เพื่อใส่ ตัวแปร xpay ในการเรียกดูข้อมูลของ xpay ผ่านฟังก์ชั่นของ PayD
 
     // Print values from the adapted PayD interface
     System.out.println("Credit Card Number: " + payD.getCreditCardNo());
